@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="main">
+
+    <header>
+        <h1>Create your own smoothie</h1>
+        <h2>Give a treat to yourself today.</h2>
+    </header>
+    <!--Creating the smoothie-->
+    <div class="productSelect">
+        <form action="" method="POST">
+            <div class="product-ingredients free">
+                <h2>Choose the base of your smoothie</h2>
+                <div>
+                    <select name="freeIngredients" id="">
+                        <option value>Choose first ingredient</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="" id="">
+                        <option value>Choose second ingredient</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="" id="">
+                        <option value>Choose third ingredient</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <fieldset>
+                <h2>Additional Ingredients</h2>
+                <div class="ingredients">
+                    <ul>
+                        <li>
+                            <label for=""></label>
+                            <input type="checkbox">
+                        </li>
+                        <li>
+                            <label for=""></label>
+                            <input type="checkbox">
+                        </li>
+                        <li>
+                            <label for=""></label>
+                            <input type="checkbox">
+                        </li>
+                        <li>
+                            <label for=""></label>
+                            <input type="checkbox">
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h2>Toppings</h2>
+                <div class="ingredients">
+                    <ul>
+                        <li>
+                            <label for=""></label>
+                            <input type="checkbox">
+                        </li>
+                        <li>
+                            <label for=""></label>
+                            <input type="checkbox">
+                        </li>
+                        <li>
+                            <label for=""></label>
+                            <input type="checkbox">
+                        </li>
+                        <li>
+                            <label for=""></label>
+                            <input type="checkbox">
+                        </li>
+                        <li>
+                            <label for=""></label>
+                            <input type="checkbox">
+                        </li>
+                    </ul>
+                    
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+  <!--Customer info-->
+    <div class ="customerInfo">
+    <form action="" method="POST" id="bottomForm">
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p class%>
+                <input type="text" name="fname" placeholder="First Name" required >
+                <input type="text" name="lname" placeholder="Last Name" required>
+            </p>
+            <p>
+                <input type="text" name="company" placeholder="Company (optional)">
+            </p>
+            <p>
+                <input type="text" name="address" placeholder="Address" required>
+            <p>
+                <input type="text" name="add-address" placeholder="Apartment, suite etc. (optional)">
+            </p>
+            <p>
+                <input type="text" name="city" placeholder="City" required>
+            </p>
+            <p> 
+                <label for="country">Country/Region</label>
+                <input type="text" name="country" list="countries">
+                <datalist id="countries">
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Germany">Germany</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Denmark">Denmark</option>
+                 </datalist>
+            </p>
+            <p>
+                <input type="text" name="postcode" placeholder="Postcode">
+            </p>
+            <p>
+                <input type="tel" name="phone" id="phone" placeholder="Phone">
+            </p>
+        </section>
+    <!--Payment info-->
+        <section class="payment-info">
+            <h2>Payment Information</h2>
+            <p>
+                <label for="CardNo">Card number</label>
+                <input type="text" name="CardNo" id="CardNo">
+            </p>
+            <p>
+                <label for="expiryDate">Expiry Date</label>
+                <select name="expiryMonth">
+                    <option>Month</option>  <!-- value cannot be null-->
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <label for="expiryYear" id="expiryYearLabel"></label>
+                <select name="expiryYear" id="expiryYear">
+                    <option>Year</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            </p>
+            <p>
+                <label for="holderName">Name on Card</label>
+                <input type="text" name="holderName" id="holderName">
+            </p>
+            <p>
+                <label for="cvv">CVV</label>
+                <input type="number" name="cvv" id="cvv" step="none" pattern="">
+            </p>
+        </section>
+
+    </form>
+</div>
+
+<div class="recap">
+
+</div>
+
+</div>
+</body>
+</html>
