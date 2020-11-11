@@ -1,34 +1,124 @@
-.main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80%;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: teal;
+    color: white;
 }
 
-.bottomForm {
+.forms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5% 7%;
+}
+.payments {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.fname{
+    width: 80px;
+    height: 30px;
+}
+.lname{
+    width: 165px;
+    height: 30px;
+}
+.contacts input {
+    width: 250px;
+}
+
+input, select {
+    height: 30px;
+}
+input:required {
+    border: 2px solid black;
+}
+
+input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 5px;
+}
+
+.dates {
+    display: inline-flex;
+}
+
+#cvv {
+    width: 60px;
+}
+
+.card {
+    position: relative;
+}
+.card-img {
+    position: absolute;
+    color: black;
+    top: 24px;
+    left: 220px;
+    font-size: 20px;
+}
+
+.button {
+    background-color: white;
+    border-radius: 12.5px;
+    border-style: none;
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+
+/*
+body {
+    background-color: #f4dada;
     
 }
 
-.payment-info {
-    border: 1px red solid ;
-    border-radius: 12,5px;
+header {
     text-align: center;
-    width: 50%
 }
 
-input, button, select {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+h1 {
+    color: white;
 }
 
-
-label {
-    text-transform: uppercase;
+.top{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-top: 3%;
+    font-family: 'Roboto', sans-serif;
 }
-/* required as blue */
 
-
-#cvv {
-    width: 130px;
+.product {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    
 }
+select {
+    font-family: inherit;
+}
+.top li {
+    display: inline-flex;
+}
+
+fieldset {
+    border: none;
+    text-align: center;
+}
+
+.product-ingredients {
+    padding: 2%;
+}
+*/
+
+
+
+

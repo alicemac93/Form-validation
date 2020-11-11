@@ -4,152 +4,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/85984ea969.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="main">
-
-    <header>
-        <h1>Create your own smoothie</h1>
-        <h2>Give a treat to yourself today.</h2>
-    </header>
-    <!--Creating the smoothie-->
-    <div class="productSelect">
-        <form action="" method="POST">
-            <div class="product-ingredients free">
-                <h2>Choose the base of your smoothie</h2>
-                <div>
-                    <select name="freeIngredients" id="">
-                        <option value>Choose first ingredient</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div>
-                    <select name="" id="">
-                        <option value>Choose second ingredient</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div>
-                    <select name="" id="">
-                        <option value>Choose third ingredient</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-            </div>
-            <fieldset>
-                <h2>Additional Ingredients</h2>
-                <div class="ingredients">
-                    <ul>
-                        <li>
-                            <label for=""></label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label for=""></label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label for=""></label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label for=""></label>
-                            <input type="checkbox">
-                        </li>
-                    </ul>
-                </div>
-            </fieldset>
-            <fieldset>
-                <h2>Toppings</h2>
-                <div class="ingredients">
-                    <ul>
-                        <li>
-                            <label for=""></label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label for=""></label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label for=""></label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label for=""></label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label for=""></label>
-                            <input type="checkbox">
-                        </li>
-                    </ul>
-                    
-                </div>
-            </fieldset>
-        </form>
-    </div>
 
   <!--Customer info-->
     <div class ="customerInfo">
-    <form action="" method="POST" id="bottomForm">
+    <form action="./fetchingdata.js" method="POST" id="bottomForm" class="sub">
+     <div class="forms">
         <section class="contact-info">
             <h2>Contact Information</h2>
-            <p class%>
-                <input type="text" name="fname" placeholder="First Name" required >
-                <input type="text" name="lname" placeholder="Last Name" required>
-            </p>
             <p>
+                <input type="text" class="fname"name="fname" placeholder="First Name" pattern="[A-Za-z][A-Za-z]*" required >
+                <input type="text" class="lname" name="lname" placeholder="Last Name" pattern="[A-Za-z][A-Za-z]*" required>
+            </p>
+            <p class="contacts">
                 <input type="text" name="company" placeholder="Company (optional)">
             </p>
-            <p>
-                <input type="text" name="address" placeholder="Address" required>
-            <p>
+            <p class="contacts">
+                <input type="text" name="address" placeholder="Address" pattern="[A-Za-z0-9\s][A-Za-z0-9\s\.]*" required>
+            <p class="contacts">
                 <input type="text" name="add-address" placeholder="Apartment, suite etc. (optional)">
+            </p class="contacts">
+            <p class="contacts">
+                <input type="text" name="city" placeholder="City" minlength="2" pattern="[A-Za-z][A-Za-z]*" required>
             </p>
-            <p>
-                <input type="text" name="city" placeholder="City" required>
-            </p>
-            <p> 
-                <label for="country">Country/Region</label>
-                <input type="text" name="country" list="countries">
-                <datalist id="countries">
+            <p class="contacts"> 
+                <select id="countries" required>
                 <option value="Czech Republic">Czech Republic</option>
                 <option value="United Kingdom">United Kingdom</option>
                 <option value="Germany">Germany</option>
                 <option value="Netherlands">Netherlands</option>
                 <option value="Denmark">Denmark</option>
-                 </datalist>
+                </select>
             </p>
-            <p>
-                <input type="text" name="postcode" placeholder="Postcode">
+            <p class="contacts">
+                <input type="text" name="postcode" placeholder="Postcode" minlength="4" pattern="[A-Za-z0-9\s]*" required>
             </p>
-            <p>
-                <input type="tel" name="phone" id="phone" placeholder="Phone">
+            <p class="contacts">
+                <input type="tel" id="phone" name="phone" id="phone" placeholder="Phone" minlength="6" pattern="^[\+]\d*$" required>
+                <span id="errorTel" aria-live="polite"></span>
+            </p>
+            <p class="contacts">
+                <input type="email" id="email" name="email" placeholder="Email" pattern="[A-Za-z0-9\.-_*]+@[a-z0-9]*\.[a-z]{2,}$" >
             </p>
         </section>
     <!--Payment info-->
         <section class="payment-info">
             <h2>Payment Information</h2>
-            <p>
+            <p class="card payments">
                 <label for="CardNo">Card number</label>
-                <input type="text" name="CardNo" id="CardNo">
+                <input type="text" name="CardNo" id="cardNo" pattern="[0-9]{16}" required><i class="fas card-img fa-credit-card"></i></input>
+                <span id="errorCard" aria-live="polite"></span>
             </p>
-            <p>
+            <p class="payments">
                 <label for="expiryDate">Expiry Date</label>
-                <select name="expiryMonth">
+                <div class="dates">
+                <select name="expiryMonth" required>
                     <option>Month</option>  <!-- value cannot be null-->
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -165,7 +77,7 @@
                     <option value="12">12</option>
                 </select>
                 <label for="expiryYear" id="expiryYearLabel"></label>
-                <select name="expiryYear" id="expiryYear">
+                <select name="expiryYear" id="expiryYear" required>
                     <option>Year</option>
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
@@ -179,24 +91,25 @@
                     <option value="2029">2029</option>
                     <option value="2030">2030</option>
                 </select>
+            </div>
             </p>
-            <p>
+            <p class="payments">
                 <label for="holderName">Name on Card</label>
-                <input type="text" name="holderName" id="holderName">
+                <input type="text" name="holderName" id="holderName" pattern="[A-Za-z][A-Za-z\.]*" required>
+            </p>
+            <p class="payments">
+                <label for="cvv">CVV</label>
+                <input type="tel" name="cvv" id="cvv" step="none" required minlength="3" pattern="[0-9]{3}">
             </p>
             <p>
-                <label for="cvv">CVV</label>
-                <input type="number" name="cvv" id="cvv" step="none" pattern="">
+                <input class="button" type="submit">
+                <input class="button" type="reset">
             </p>
         </section>
-
+    </div>
     </form>
 </div>
 
-<div class="recap">
-
-</div>
-
-</div>
+<script src="./index.js"></script>
 </body>
 </html>
