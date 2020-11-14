@@ -32,6 +32,7 @@
             </p>
             <p class="contacts"> 
                 <select id="countries" required>
+                <option value="">Select</option>
                 <option value="Czech Republic">Czech Republic</option>
                 <option value="United Kingdom">United Kingdom</option>
                 <option value="Germany">Germany</option>
@@ -62,7 +63,7 @@
                 <label for="expiryDate">Expiry Date</label>
                 <div class="dates">
                 <select name="expiryMonth" required>
-                    <option>Month</option>  <!-- value cannot be null-->
+                    <option value="">Month</option>  <!-- value cannot be null-->
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -78,7 +79,7 @@
                 </select>
                 <label for="expiryYear" id="expiryYearLabel"></label>
                 <select name="expiryYear" id="expiryYear" required>
-                    <option>Year</option>
+                    <option value="">Year</option>
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
                     <option value="2022">2022</option>
@@ -91,7 +92,7 @@
                     <option value="2029">2029</option>
                     <option value="2030">2030</option>
                 </select>
-            </div>
+            </div>  
             </p>
             <p class="payments">
                 <label for="holderName">Name on Card</label>
@@ -99,7 +100,7 @@
             </p>
             <p class="payments">
                 <label for="cvv">CVV</label>
-                <input type="tel" name="cvv" id="cvv" step="none" required minlength="3" pattern="[0-9]{3}">
+                <input type="tel" name="cvv" id="cvv" step="none" required maxlength="3" pattern="[0-9]{3}">
             </p>
             <p>
                 <input class="button" type="submit">

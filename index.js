@@ -15,7 +15,7 @@ email.addEventListener("input", function (event) {
     }
   });
 
-  cardNo.addEventListener("input", function (event) {
+cardNo.addEventListener("input", function (event) {
     if (cardNo.validity.valid | cardNo.value === "") { //true means it doesnt match the email type so it adds messageto the element
         cardError.innerHTML = "";
     } else {

@@ -4,6 +4,9 @@ body {
     background-color: teal;
     color: white;
 }
+h2 {
+    font-size: 32px;
+}
 
 .forms {
     display: flex;
@@ -26,6 +29,10 @@ body {
     width: 165px;
     height: 30px;
 }
+.contacts {
+    width: 250px;
+}
+
 .contacts input {
     width: 250px;
 }
